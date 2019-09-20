@@ -1,0 +1,590 @@
+html, body {
+	height:100%;
+	background-color: #00BFA5; /* Teal A700 (material design colors) */
+	font-family: 'Fredoka One', 'Varela Round', sans-serif;
+	height: 100%;
+/* 	color: #004D40; */
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/*-------------------------------------------------------------------------------*/
+/*-- HEADER --*/
+
+header{
+	width: 150px;
+	height: 65px;
+	float: left;
+	background-image: url(resources/logo.png);
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin:5px;
+}
+
+h1{
+	margin:0;
+}
+
+/*-------------------------------------------------------------------------------*/
+/*-- NAV --*/
+
+nav{
+	height: 75px;
+	text-align: left;
+	overflow: hidden;
+}
+
+ul{
+	margin: 0;
+}
+
+nav li{
+	display: inline;
+}
+
+nav ul li a, nav li select{
+  float: left;
+  font-size: 100%;
+  color: #004D40 /* Teal 900 (material design colors) */;
+  text-align: center;
+  text-decoration: none;
+  width:155px;
+}
+
+nav li a{
+	padding: 26px 16px;
+	transition: color .25s ease-in, background-color .25s ease-in;
+	-webkit-transition: color .25s ease-in, background-color .25s ease-in;
+}
+
+nav li select{
+	margin: 22px 11px;
+	
+}
+
+nav li a:hover {
+  background-color: #FFD740; /* Amber A200 (material design colors) */
+  color: #7B1FA2; /* Purple 700 (material design colors) */
+  text-decoration: none;
+}
+
+/*-------------------------------------------------------------------------------*/
+/*-- MAIN --*/
+
+main{
+	clear: both;
+	width: 100%;
+	font-size: 150%;
+	margin-bottom: -50px;
+	min-height: 90%;
+}
+
+
+main li{
+	width: calc(100%  /3);
+	width: 33.33%;
+	display: block;
+	float: left;
+/* 	background-color: pink; */
+/* 	border: 1px solid black; */
+	padding-bottom: 20px;
+}
+
+main li:after {
+    content: "";
+    display: block;
+/*     padding-bottom: 100%; */
+}
+
+/*-- LANGUAGE PAGE --*/
+
+.animalImage{
+	margin: 0;
+	text-align: center;
+}
+
+.animalImage img{
+	width: 80%;
+	height: 80%;
+	margin-top: 10%;
+	margin-bottom: 5%;
+}
+
+.animalName, .animalSound{
+	margin: 0;
+	text-align: center;
+	cursor: pointer;
+	
+}
+
+.animalName:hover, .animalSound:hover{
+	color:#FFD740; /* Amber A200 (material design colors) */
+/* 	text-decoration: underline; */
+	transition: color .1s ease-in;
+	-webkit-transition: color .1s ease-in;
+}
+
+
+/*-- ANIMAL PAGE --*/
+
+#animal{
+	margin: 0 16.66%;
+	display: flex;
+}
+
+main #animal #soundList {
+	height: 80%;
+	overflow: scroll;
+	margin: 10% 20px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+main #animal .animalSound{
+	width: 100%;
+	display: inline;
+	clear: both;
+	text-align: left;
+}
+
+
+main #animal li{
+	width: 50%;
+	display: block;
+	float: left;
+}
+
+/*-- ANIMAL CLASSES FOR COLORS --*/
+
+.cat{
+	background-color: #00E676; /* Green A400 (material design colors) */
+}
+.dog{
+	background-color: #3D5AFE; /* Indigo A400 (material design colors) */
+}
+.duck{
+	background-color: #F57C00; /* Orange 700 (material design colors) */
+}
+.pig{
+	background-color: #F48FB1; /* Pink 200 (material design colors) */
+}
+.rooster{
+	background-color: #F50057; /* Pink A400 (material design colors) */
+}
+.cow{
+	background-color: #7C4DFF; /* Deep Purple A200 (material design colors) */
+}
+
+
+/*-- GAME PAGE --*/
+/*-- Clue --*/
+#gameClue{
+	width: 100%;
+	display: block;
+	float: left;
+/* 	margin: 4% 33.33%; */
+	text-align: center;
+}
+
+#gameClue li{
+	padding-top: 20px;
+	float: none;
+	background-color: #00BFA5;
+	margin: 0 25%;
+    width: 50%;
+}
+
+
+/*-- Guesses --*/
+#gameGuess {
+	clear: both;
+}
+
+.animalNameGame, .animalSound{
+	margin: 0;
+	text-align: center;
+}
+
+#gameGuess li{
+	width: 25%;
+	display: block;
+	float: left;	
+}
+
+
+.correct{
+	background-color:#FFD740; /* Amber A200 (material design colors) */
+	pointer-events:none;
+}
+.disabled {
+	opacity:.7;
+	pointer-events:none;
+}
+
+/*-- CONTACT PAGE --*/
+
+#wrapper{
+	width: 100%;
+	margin: 20px auto;
+}
+
+#left {
+    width: 36%;
+    float: left;
+    text-align: right;
+    margin-right: 5px;
+}
+#right {
+    width:60%;
+    margin-left: 5px;
+    float:left;
+}
+
+#suggest br{
+	clear: both;
+}
+
+label.formError{
+    color: #7B1FA2; /* Purple 700 (material design colors) */
+    font-size: .75em;
+    padding-left: 5px;
+}
+button {
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    -moz-border-radius: 4px 4px 4px 4px; 
+	-webkit-border-radius: 4px 4px 4px 4px;
+	margin-top: 5px;
+	cursor: pointer;
+	background-color: white;
+	color: #004D40 /* Teal 900 (material design colors) */;
+}
+
+
+
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+/*-- FOOTER --*/
+footer{
+	clear: both;
+	height: 20px;
+	padding-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+	font-size: .5em;
+}
+footer a{
+	color:black;
+	text-decoration: underline;
+	padding: 4px;
+}
+
+footer a:hover{
+	background-color: #FFD740; /* Amber A200 (material design colors) */
+	color: #7B1FA2; /* Purple 700 (material design colors) */
+	text-decoration: none;
+}
+
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+/*------------------------------RESPONSIVE DESIGN--------------------------------*/
+@media not all and (hover: none){
+	#gameGuess li:hover{
+    cursor: pointer;
+    background-color:#FFC400; /* Amber A200 (material design colors) */
+    transition: background-color .2s ease-in;
+	-webkit-transition: background-color .2s ease-in;
+	}
+	
+}
+/*-- TABLET --*/
+@media only screen and (max-width: 1024px) and (orientation : portrait){
+	main li{
+		width: 50%;
+		display: block;
+		float: left;
+		padding-bottom: 20px;
+	}
+	#soundList .animalSound{
+		line-height: 1;
+	}
+	
+	#animal{
+		margin: 0;
+		display: flex;
+	}
+	main #animal li{
+		width: 100%;
+	}
+	main #animal #soundList{
+		height: 100%;
+		overflow: scroll;
+		margin: 10%;
+	}
+	/*-- game page --*/
+	#gameGuess li{
+		width: 50%;
+		display: block;
+		float: left;	
+	}
+	#gameClue li{
+		width: 100%;
+		display: block;
+		float: left;
+		text-align: center;
+		padding-top: 0;
+		padding-bottom: 10px;
+		font-size: 1em;
+		margin: 0;
+	}
+	/*-- contact page --*/
+	#wrapper{
+		width: 100%;
+		margin: 20px auto;
+		font-size: .75em;
+	}
+}
+
+/*-- MOBILE - LANDSCAPE --*/
+@media only screen and (max-width: 812px) and (orientation : landscape){
+	/*-- HEADER --*/
+	header{
+		width: 100%;
+		margin: 4px 0;
+		float: none;
+	}
+	
+	/*-- NAV --*/
+	nav{
+		width: 100%;
+		height:auto;
+	}
+	nav ul li a, nav li select{
+		font-size: 1em;
+		width:25%;
+	}
+	nav li a{
+		padding: 6px 6px;
+	}
+
+	nav li select{
+		margin: 2px 0px;
+	}
+	
+	/*-- MAIN --*/
+	main{
+		clear: both;
+		width: 100%;
+		font-size: 120%;
+		margin-bottom: 0px;
+		min-height: 0%;
+	}
+	
+	/*-- animal page --*/
+	#soundList .animalSound{
+		line-height: 1;
+	}
+	
+	#animal{
+		margin: 0;
+		display: flex;
+	}
+	main #animal li{
+		width: 100%;
+	}
+	main #animal #soundList{
+		height: 100%;
+		overflow: scroll;
+		margin: 10%;
+	}
+	
+	/*-- game page --*/
+	#gameClue li{
+		width: 50%;
+		display: block;
+		float: left;
+		text-align: center;
+		padding-top: 0;
+		padding-bottom: 10px;
+		font-size: 1em;
+	}
+	
+	/*-- contact page --*/
+	#wrapper{
+		width: 100%;
+		margin: 20px auto;
+		font-size: 1em;
+	}
+	label.formError{
+    	color: #7B1FA2; /* Purple 700 (material design colors) */
+		font-size: .5em;
+		padding-left: 5px;
+	}
+	/*-- contact page --*/
+	#wrapper{
+		width: 100%;
+		margin: 20px auto;
+		font-size: 120%;
+	}
+	label.formError{
+    	color: #7B1FA2; /* Purple 700 (material design colors) */
+		font-size: .5em;
+		font-size: .75em;
+	    padding-left: 0;
+	    margin-bottom: 0;
+	}
+	#left {
+	    width: 50%;
+	    float: none;
+	    text-align: left;
+	    margin: 0 auto;
+	}
+	#right {
+	    width:50%;
+	    margin: 0 auto;
+	    float:none;
+	}
+	#suggest br{
+		clear: both;
+	}
+	input{
+		width: 100%;
+	}
+}
+/*-- MOBILE - PORTRAIT --*/
+@media only screen and (max-width: 812px) and (orientation : portrait) {
+	/*-- HEADER --*/
+	header{
+		width: 100%;
+		margin: 4px 0;
+		float: none;
+	}
+	
+	/*-- NAV --*/
+	nav{
+		width: 100%;
+		height:auto;
+	}
+	nav ul li a, nav li select{
+		font-size: .65em;
+		width:25%;
+	}
+	nav li a{
+		padding: 6px 6px;
+	}
+
+	nav li select{
+		margin: 2px 0px;
+	}
+	
+	/*-- MAIN --*/
+	main{
+		clear: both;
+		width: 100%;
+		font-size: 150%;
+		margin-bottom: 0px;
+		min-height: 0%;
+	}
+	.animalName, .animalSound{
+		font-size: .80em;
+	}
+	main li{
+		width: 50%;
+		display: block;
+		float: left;
+		padding-bottom: 20px;
+	}
+	
+	/*-- animal page --*/
+	#soundList .animalSound{
+		font-size: .65em;
+		line-height: 1;
+	}
+	#animal{
+		margin: 0;
+		display: inline;
+	}
+	main #animal li{
+		width: 100%;
+		padding-bottom: 20px;
+	}
+	main #animal #soundList{
+		height: 100%;
+		overflow: scroll;
+		margin: 0;
+		margin-bottom: -20px;
+	}
+	main #animal #soundList ul li{
+		padding-bottom: 10px;
+		text-align: center;
+	}
+	/*-- game page --*/
+	#gameGuess li{
+		width: 50%;
+		display: block;
+		float: left;	
+	}
+	#gameClue li{
+		width: 100%;
+		display: block;
+		float: left;
+		text-align: center;
+		padding-top: 0;
+		padding-bottom: 10px;
+		font-size: .65em;
+		margin: 0;
+	}
+	button {
+	    border: none;
+	    padding: 5px 10px;
+	    text-align: center;
+	    text-decoration: none;
+	    -moz-border-radius: 0; 
+		-webkit-border-radius: 0;
+		margin-top: 5px;
+		cursor: pointer;
+	}
+	
+	/*-- contact page --*/
+	#wrapper{
+		width: 100%;
+		margin: 20px auto;
+		font-size: .65em;
+	}
+	label.formError{
+    	color: #7B1FA2; /* Purple 700 (material design colors) */
+		font-size: .65em;
+		padding-left: 0px;
+		margin-bottom: 0;
+	}
+	#left {
+	    width: 50%;
+	    float: none;
+	    text-align: left;
+	    margin: 0 auto;
+	}
+	#right {
+	    width:50%;
+	    margin: 0 auto;
+	    float:none;
+	}
+	#suggest br{
+		clear: both;
+	}
+	input{
+		width: 100%;
+	}
+	
+}

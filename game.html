@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <!-- CHARACTER SET -->
+        <meta charset="utf-8" />
+        <!-- FOR RESPONSIVE DESIGN -->
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <!-- WEBSITE TITLE -->
+        <title>ANIMAL SOUNDS :: ANIMALS</title>
+        <!-- BOOTSTRAP -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <!-- STYLE SHEET -->
+        <link href="animal_sounds.css?v=1.3" rel="stylesheet">
+        <!-- GOOGLE FONT -->
+        <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Open+Sans|Varela+Round" rel="stylesheet">
+        <!-- FAVICON -->
+        <link href="favicon.ico" rel="icon" type="image/x-icon">
+        <!--[if lt IE 9]
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        [endif] -->
+        <!-- SEO -->
+        <meta name="description" content="Animal Sounds, a website to learn animal noises in different languages, like English, Spanish, Portuguese, German, Korean, and Japanese." >
+    </head>
+    <body>
+	    <!-- HEADER SECTION -->
+	    <header>
+<!-- 	    	<h1>ANIMAL SOUNDS</h1> -->
+	    </header>
+	    
+	    <!-- NAVIGATION SECTION -->
+	    <nav>
+		    <ul>
+			    <li><a href="index.html">Language</a></li>
+			    <li><a href="animals.html">Animals</a></li>
+			    <li><select name="languageSelectGame" id="languageSelectGame">
+				    <option value="English">English</option>
+				    <option value="Spanish">Spanish</option>
+				    <option value="Portuguese">Portuguese</option>
+				    <option value="German">German</option>
+				    <option value="Korean">Korean</option>
+				    <option value="Japanese">Japanese</option>
+			    </select></li>
+			    <li><a href="contact.html">Contact</a></li>
+		    </ul>
+	    </nav>
+	    
+	    <!-- MAIN SECTION -->
+	    <main>
+		    <ul id="gameClue">
+			    <li id="gameSound" class="animalSound">meow</li>
+			    <li id="gameButton"><button id="playAgain" type="button">Reset</button></li>
+	    	</ul>
+	    	
+		    <ul id="gameGuess">
+			    <li id="listItem0">
+			    	<div class="animalImage" id="animalImage0"><img src="resources/dog.jpg" alt="dog"></div>
+			    	<div class="animalNameGame" id="animalName0">Dog</div>
+			    </li>
+			    <li id="listItem1">
+			    	<div class="animalImage" id="animalImage1"><img src="resources/duck.jpg" alt="duck"></div>
+			    	<div class="animalNameGame" id="animalName1">Duck</div>
+			    </li>
+			    <li id="listItem2">
+			    	<div class="animalImage" id="animalImage2"><img src="resources/pig.jpg" alt="pig"></div>
+			    	<div class="animalNameGame" id="animalName2">Pig</div>
+			    </li>
+			    <li id="listItem3">
+			    	<div class="animalImage" id="animalImage3"><img src="resources/rooster.jpg" alt="rooster"></div>
+			    	<div class="animalNameGame" id="animalName3">Rooster</div>
+			    </li>		    
+		    </ul>
+		    
+		    
+		    <!-- hidden div to load all resources on page load-->
+			<div hidden>
+				<img src="resources/dog.jpg" alt="dog">
+				<img src="resources/duck.jpg" alt="duck">
+				<img src="resources/pig.jpg" alt="pig">
+				<img src="resources/rooster.jpg" alt="rooster">
+				<img src="resources/cow.jpg" alt="cow">
+				<!-- name audio -->
+				<audio id="gameSoundAudio" src="resources/korean-cat-name.mp3" type="audio/mpeg"></audio>
+			</div>
+	    </main>
+	    
+	    <!-- FOOTER SECTION -->
+	    <footer>
+		    Created by <a href="mailto:aaraujo1@my.wctc.edu">André Araujo</a>
+	    </footer>
+    
+        
+        <!-- JAVASCRIPT -->
+            <!-- jQuery -->
+            <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+            <!-- jQuery Validation -->
+	        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+            <!-- BOOSTRAP -->
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+            <!-- My jQuery -->
+            <script src="animal_sounds.js"></script>
+    </body>
+</html>
